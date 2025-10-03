@@ -44,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Icon(
           Icons.add,
           color: AppColor.primaryLightbgColor,
-          size: 50,
+          size: 52,
         ),
       ),
       bottomNavigationBar: _buildBottomNavBar(),
