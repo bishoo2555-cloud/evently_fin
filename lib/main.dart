@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:eventlyapp/Home%20Screen/home_screen.dart';
 import 'package:eventlyapp/Home%20Screen/tabs/profile%20tab/profile_screen.dart';
 import 'package:eventlyapp/Providers/app_language_provider.dart';
@@ -25,6 +26,7 @@ void main()async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  await FirebaseFirestore.instance.disableNetwork();
     await SharedPreferences.getInstance();
 
   runApp(MultiProvider(providers: [
